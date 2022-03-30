@@ -64,7 +64,7 @@ app.get('/descarga',async(req , res)=>{
 
 
 
-app.get('/',(req , res)=>{
+app.get('/funciona',(req , res)=>{
 
         
     res.send("funciona")
