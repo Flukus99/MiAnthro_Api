@@ -5,7 +5,7 @@ const cors= require("cors")
 
 const fs=require("fs");
 const app=express();
-const port= 3000;
+const port= process.env.PORT || 3005;
 const date=Date.now()
 
 
@@ -60,7 +60,18 @@ app.get('/descarga',async(req , res)=>{
     
     
 })
-    
+
+
+
+
+app.get('/',(req , res)=>{
+
+        
+    res.send("funciona")
+  
+  
+})
+  
 
 
 
