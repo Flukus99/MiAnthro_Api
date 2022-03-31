@@ -5,7 +5,7 @@ const cors= require("cors")
 
 const fs=require("fs");
 const app=express();
-const port= process.env.PORT || 3005;
+const PORT= process.env.PORT || 8080;
 const date=Date.now()
 
 
@@ -79,7 +79,7 @@ app.get('/funciona',(req , res)=>{
 
 
 
-app.listen(port, ()=>console.log("funciona escuchando en el puerto 3000"))
+app.listen(PORT, ()=>console.log("funciona escuchando en el puerto 3000"))
 
 
 function eliminar(ruta){
