@@ -7,7 +7,7 @@ const fs=require("fs");
 const app=express();
 const PORT= process.env.PORT || 8080;
 const date=Date.now()
-const whitelist=["https://mi-anthro.vercel.app/home","https://mi-anthro.vercel.app/files/ninas","https://mi-anthro.vercel.app/files/ninos","https://mi-anthro.vercel.app/descarga"]
+const whitelist=["*"]
 
 const storage=multer.diskStorage({
     destination: 'uploads/',
@@ -22,7 +22,8 @@ const upload=multer({
     storage:storage
 })
 
-app.use(cors({origin:[whitelist]}));
+app.use(cors({origin:"*"}));
+
 app.post("/files/:id",upload.single('data'),(req,res)=>{
     
     
