@@ -7,7 +7,7 @@ const fs=require("fs");
 const app=express();
 const PORT= process.env.PORT || 8080;
 const date=Date.now()
-const whitelist=["*"]
+const whitelist=["http://localhost:4200","https://mi-anthro.vercel.app"]
 
 const storage=multer.diskStorage({
     destination: 'uploads/',
@@ -22,7 +22,9 @@ const upload=multer({
     storage:storage
 })
 
-app.use(cors({origin:"*"}));
+app.use(cors({
+    origin:[whitelist]
+}));
 
 app.post("/files/:id",upload.single('data'),(req,res)=>{
     
