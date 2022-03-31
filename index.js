@@ -7,7 +7,7 @@ const fs=require("fs");
 const app=express();
 const PORT= process.env.PORT || 8080;
 const date=Date.now()
-const whitelist=["http://localhost:4200","https://mi-anthro.vercel.app"]
+const whitelist=["http://localhost:4200","https://mi-anthro.vercel.app","https://mi-anthro.vercel.app/home"]
 
 const storage=multer.diskStorage({
     destination: 'uploads/',
