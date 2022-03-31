@@ -5,7 +5,7 @@ const cors= require("cors")
 
 const fs=require("fs");
 const app=express();
-const port= process.env.PORT;
+const port= process.env.PORT || 3005;
 const date=Date.now()
 
 
