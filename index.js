@@ -23,7 +23,7 @@ const upload=multer({
 })
 
 app.use(cors({
-    origin:[whitelist]
+    origin:"*"
 }));
 
 app.post("/files/:id",upload.single('data'),(req,res)=>{
