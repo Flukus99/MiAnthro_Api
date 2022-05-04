@@ -25,6 +25,7 @@ else:
 
     
 prueba=pd.read_csv("./uploads/libro"+b+".csv")
+data_user=prueba.drop(["nombre"],axis=1)
 prueba.head()
 
 
@@ -35,7 +36,7 @@ tree_pred=tree.predict(X_test)
 tree_score=adjusted_rand_score(y_test,tree_pred)
 print(f"el modelo tree tiene un score de {tree_score}")
 print("*"*60)
-tree_pred=tree.predict(prueba)
+tree_pred=tree.predict(data_user)
 print(tree_pred)
 #print(tree_pred)
 
